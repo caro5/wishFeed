@@ -1,0 +1,23 @@
+{
+  "name": "wishFeed",
+  "version": "1.0.0",
+  "description": "customizable news aggregator",
+  "main": "feed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caro5/wishFeed.git"
+  },
+  "author": "Caroline Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caro5/wishFeed/issues"
+  },
+  "homepage": "https://github.com/caro5/wishFeed",
+  "dependencies": {
+    "express": "^4.10.4",
+    "requirejs": "^2.1.15"
+  }
+}

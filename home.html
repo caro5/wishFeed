@@ -1,6 +1,6 @@
 <!Doctype html>
 	<head>
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+		
 
 		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
 
@@ -10,19 +10,40 @@
   
 		<link rel="stylesheet" href="styles.css"/>
 		<script src="feed.js"></script>
-		
+		<script src="server.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  	<script type="text/javascript">
+	    	google.load("feeds", "1");
+	    	function initialize() {
+				var feed = new google.feeds.Feed("https://news.ycombinator.com/rss");
+				feed.load(function(result) {
+					if (!result.error) {
+						var container = document.getElementById("hn");
+						for (var i = 0; i < result.feed.entries.length; i++) {
+							var entry = result.feed.entries[i];
+							var div = document.createElement("div");
+							div.appendChild(document.createTextNode(entry.title));
+							container.appendChild(div);
+						}
+					}
+		      });
+		    }
+		    google.setOnLoadCallback(initialize);
+    	</script>
+
 	</head>
 
 	<body>
-		<div class="feed">
+		 <div id="feed"></div>
+		<div class="feed" id="hn">
 		</div>
-<!--
+
 	<script type="text/javascript"> 
 		$(function() {
-			parseFeed('https://news.ycombinator.com/rss', '.hn');
+			// initialize();
+			//parseFeed('https://news.ycombinator.com/rss', '.hn');
 		});
 	</script>
--->
 
 	</body>
 <html>
