@@ -8,3 +8,11 @@ html {
 	width: 200px;
 	position: absolute;
 }
+
+a {
+	display: block;
+	height: 20px;
+	color: #900;
+	text-decoration: none;
+	z-index:300;
+}
