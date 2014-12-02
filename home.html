@@ -1,5 +1,8 @@
 <!Doctype html>
 	<head>
+			<!-- firebase -->
+		<script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+
 		<!-- javascript files -->
 		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
 		<script src="jquery-ui-1.11.2.custom/jquery-ui.min.js"></script>
@@ -15,6 +18,10 @@
 		<script src="js/foundation/foundation.topbar.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
+
+
+
+
 		<!-- nav bar -->
 		<nav class="top-bar" data-topbar role="navigation" data-options="is_hover: false">
 	  	<ul class="title-area">
@@ -23,7 +30,10 @@
 		    </li>
 	    	<li class="toggle-topbar"><a href="#"><span></span></a></li>
 	  	</ul>
-	  	<input id="showOptionsButton" class="right" type="button" value="add feed" onclick="showHideOptionsList()">
+	  	<!-- <input id="editButton" class="right" type="button" value="edit" onclick="saveFeeds()"> -->
+	  	<input id="saveFeedsButton" class="right small secondary button" type="button" value="save feeds" onclick="saveFeeds()">
+	  	<input id="showOptionsButton" class="right small secondary button" type="button" value="add feed" onclick="showHideOptionsList()">
+	  	
 	  	<ul id="optionsList">
 				<li id="hackerNewsOption">hacker news</li>
 				<li id="dribbbleOption">dribbble</li> 
@@ -31,18 +41,8 @@
 				<li id="bbcOption">bbc</li> 
 				<li id="scienceDailyOption">science daily</li> 
 				<li id="redditOption">reddit</li> 
-				<li> <input id="createFeed" type="button" value="create feed" onclick="addFeedToPage()"></li>
+				<li> <input id="createFeed" class="right small button" type="button" value="create feed" onclick="addFeedToPage()"></li>
 		</ul> 
-
-	  	<section class="top-bar-section">
-	      		
-		    </li>
-			
-	    	</ul>
-	    <!-- <li class="has-form right">
-  			<a href="#" onclick="addFeedToPage()" class="button [small]">Add Feed</a>
-		</li> -->   
-	    </section>
 	</nav>	 
 
 	</head>
