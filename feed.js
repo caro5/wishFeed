@@ -1,14 +1,28 @@
-
 $(document).ready(function() {
-	$(".feed").draggable({
-		grid: [20,20]
+	$(".feed")
+	.draggable({
+		grid: [20,20]		
 	})
 	.resizable({
 		grid: 30
-	});
-
-	
+	});	
 });
+
+$(function() {
+	$('#optionsList').selectable();
+});
+var addFeedToPage = function() {
+	var feedContainer = document.getElementById('allFeeds');
+	console.log(feedContainer);
+	var div = document.createElement("div");
+	div.addClass('feed');
+	div.text = "asdf";
+	feedContainer.appendChild(div);
+
+};
+// var script = document.createElement('script');
+// script.setAttribute('src', "https://www.google.com/jsapi");
+// $("head").append(script);
 
 // google.load("feeds", "1");
 // var parseFeed = function(url, cont) {
