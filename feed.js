@@ -9,6 +9,10 @@ var urls = {
 
 var alreadyUsed = {};
 $(document).ready(function() {
+
+	$('#optionsList').hide();
+	$('#addFeed').hide();
+
 	$(".feed")
 	.draggable({
 		grid: [20,20]		
@@ -28,17 +32,17 @@ $(document).ready(function() {
 	});	
 });
 
+var showHideOptionsList = function() {
+	$('#optionsList').toggle();
+	$('#addFeed').toggle();
+}
 
 var getDribbble = function() {
 	var str = "#dribbble";
-			var div = document.createElement("div");
-			div.appendChild(document.createTextNode("dribbble"));
-
 	$.jribbble.getShotsByList('popular', function (listDetails) {
 		var html = [];
 		
 		$.each(listDetails.shots, function (i, shot) {
-			// html.push('<li><h3>' + shot.title + '</h3>');
 			// html.push('<h4>by ' + shot.player.name + '</h4><a href="' + shot.url + '">');
 			// html.push('<img src="' + shot.image_teaser_url + '" ');
 			// html.push('alt="' + shot.title + '"></a></li>');
@@ -49,17 +53,7 @@ var getDribbble = function() {
 			console.log(fullString);
 			// console.log(shot);
 		});
-		$(str).append(div).append(html.join(''));
-// var entry = result.feed.entries[i];
-// 				var a = document.createElement("a");
-// 				var img = document.createElement("img");
-// 				img = entry.content;
-// 				a.text = entry.title;
-// 				a.href = entry.link;
-// 				div.appendChild(a);
-// 				$(str).append(div);
-
-		// $('#shotsByList').html(html.join(''));
+		$(str).append('<p>dribbble</p>').append(html.join(''));
 	}, {page: 2, per_page: 10});
 };
 
@@ -99,14 +93,12 @@ var parseFeed = function(url, cont) {
 		if (!result.error) {
 			console.log(cont);
 			var str = "#" + cont;
+			$(str).append('<p>' + cont + '</p>')
 			var div = document.createElement("div");
-			div.appendChild(document.createTextNode(cont));
 			
 			for (var i = 0; i < result.feed.entries.length; i++) {
 				var entry = result.feed.entries[i];
 				var a = document.createElement("a");
-				var img = document.createElement("img");
-				img = entry.content;
 				a.text = entry.title;
 				a.href = entry.link;
 				div.appendChild(a);

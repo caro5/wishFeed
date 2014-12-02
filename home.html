@@ -1,43 +1,70 @@
 <!Doctype html>
 	<head>
+		<!-- javascript files -->
 		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
 		<script src="jquery-ui-1.11.2.custom/jquery-ui.min.js"></script>
 		<link rel="stylesheet" href="jquery-ui-1.11.2.custom/jquery-ui.css">
-		<link rel="stylesheet" href="styles.css"/>
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		<script src="jribbble/src/jribbble.js"></script>
-
 		<script src="feed.js"></script>
-	  	  
-    	<script type="text/javascript"> 
 
-		// $(function() {
-		// 	parseFeed("https://news.ycombinator.com/bigrss", "hackerNews");
-		// 	parseFeed("https://dribbble.com/shots/popular.rss", "dribbble");
-		// 	parseFeed("http://www.quora.com/rss", "quora");
-		// 	parseFeed("http://feeds.bbci.co.uk/news/rss.xml", "bbc");
-		// 	parseFeed('http://feeds.sciencedaily.com/sciencedaily/top_news?format=xml', 'scienceDaily')
-		// });
-	</script>
+		<!-- stylesheets -->
+		<link rel="stylesheet" href="styles.css"/>
+		<link rel="stylesheet" href="css/foundation.min.css">
+		<script src="js/foundation/foundation.js"></script>
+		<script src="js/foundation/foundation.topbar.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+		<!-- nav bar -->
+		<nav class="top-bar" data-topbar role="navigation" data-options="is_hover: false">
+	  	<ul class="title-area">
+		    <li class="name">
+		      <h1><a href="#">wishFeed</a></h1>
+		    </li>
+	    	<li class="toggle-topbar"><a href="#"><span></span></a></li>
+	  	</ul>
+	  	<input id="showOptionsButton" class="right" type="button" value="add feed" onclick="showHideOptionsList()">
+	  	<ul id="optionsList">
+				<li id="hackerNewsOption">hacker news</li>
+				<li id="dribbbleOption">dribbble</li> 
+				<li id="quoraOption">quora</li> 
+				<li id="bbcOption">bbc</li> 
+				<li id="scienceDailyOption">science daily</li> 
+				<li id="redditOption">reddit</li> 
+				<li> <input id="createFeed" type="button" value="create feed" onclick="addFeedToPage()"></li>
+		</ul> 
+
+	  	<section class="top-bar-section">
+	      		
+		    </li>
+			
+	    	</ul>
+	    <!-- <li class="has-form right">
+  			<a href="#" onclick="addFeedToPage()" class="button [small]">Add Feed</a>
+		</li> -->   
+	    </section>
+	</nav>	 
+
 	</head>
 	<body>
-		<input id="addFeed" type="button" value="add feed" onclick="addFeedToPage()">
-		<ul id="optionsList">
+		<div id="allFeeds"></div>
+	</body>
+<html>
+
+
+<!-- <ul id="optionsList">
 			<li id="hackerNewsOption">hacker news</li>
 			<li id="dribbbleOption">dribbble</li> 
 			<li id="quoraOption">quora</li> 
 			<li id="bbcOption">bbc</li> 
 			<li id="scienceDailyOption">science daily</li> 
 			<li id="redditOption">reddit</li> 
-		</ul>
-		 <div id="allFeeds"></div>
+		</ul> -->
+				
+		
 			<!-- <div class="feed" id="hackerNews"></div>
 			<div class="feed" id="dribbble"></div> 
 			<div class="feed" id="quora"></div>
 			<div class="feed" id="bbc"></div>
-			<div class="feed" id="scienceDaily"></div> -->
+			<div class="feed" id="scienceDaily"></div> -->		
 
-		</div>
-		
-	</body>
-<html>
