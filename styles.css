@@ -8,6 +8,15 @@ body {
 	display: inline-block;
 }
 
+#dribbble a {
+	display: block;
+	height: 100px;
+	color: gray;
+	text-decoration: none;
+	z-index:300;
+	margin: 5px 0 5px 0;
+	padding: 10px;
+}
 #addFeed {
 	float: right;
 	top: 0;
