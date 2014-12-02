@@ -12,6 +12,8 @@ body {
 	float: right;
 	top: 0;
 	right: 0;
+	margin-right: 50px;
+	z-index: 99;
 }
 #optionsList {
 	margin-top: 20px;
@@ -19,21 +21,21 @@ body {
 	text-align: right;
 	position: relative;
 	list-style-type: none;
+	z-index: 100;
 }
 
-  #optionsList .ui-selected { 
-  	background: gray; color: white; 
-  }
+#optionsList .ui-selected { 
+	background: gray; color: white; 
+}
 
 .feed {
-	border: black 1px solid;
+	border: black 2px solid;
 	height: 250px;
 	width: 250px;
 	position: absolute;
 	white-space: nowrap;
 	overflow-y: hidden;
 	background-color: white;
-
 }
 a {
 	display: block;
