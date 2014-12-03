@@ -98,23 +98,6 @@ var getDribbble = function() {
 // saveButton clicked -> saves to firebase the divs and their dimensions
 var saveFeeds = function() {
 	fb.child('allFeeds').remove();
-	// fb.once('value', function(snapshot) {
-	// 	var objArr = snapshot.child('allFeeds').val();
-	// 	for (var k in objArr) {
-	// 		var obj = objArr[k];
-	// 		// console.log(snapshot.child('allFeeds').val());	
-	// 		$('#allFeeds')
-	// 		.append('<div class="feed" id="'+ obj.name + '" style="top: '+obj.top +'; left:'+obj.left+'px; height:'+obj.height+'px;width:'+obj.width+'px;"></div>');
-	// 		$('#'+obj.name).draggable({
-	// 		grid: [20,20]		
-	// 		})
-	// 		.resizable({
-	// 			grid: 30
-	// 		});	
-			
-	// 	}
-	// });
-
 	$("#allFeeds > div").each(function() {
 		var id = $(this).attr('id');
 		var str = "#" + id;
@@ -128,6 +111,7 @@ var saveFeeds = function() {
 		};
 		fb.child('allFeeds').push(objectToSave);
 	});
+	alert("SAVED");
 
 };
 var addFeedToPage = function() {
