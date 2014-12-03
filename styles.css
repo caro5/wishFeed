@@ -1,5 +1,5 @@
 html {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif !important;
 
 }
 body {
@@ -10,6 +10,9 @@ body {
 	color: #EDEDED;
 }
 
+.button.secondary {
+	background-color: white !important;
+}
 button {
 	font-family: 'Montserrat', sans-serif;
 	background-color: white;

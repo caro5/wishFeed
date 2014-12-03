@@ -39,6 +39,14 @@ var getFeeds = function() {
 
 
 $(document).ready(function() {
+	var auth = new FirebaseSimpleLogin(fb, function(error, user) {
+		fb.authWithOAuthPopup("github", function(error, authData) {
+	    	if (error) {
+	    		alert('MUST LOG IN');
+	    	}
+    	});
+	});
+	
 	//if firebase has divs populate
 	getFeeds();
 	$('#optionsList').hide();

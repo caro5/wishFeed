@@ -2,6 +2,7 @@
 	<head>
 			<!-- firebase -->
 		<script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+		<script src="https://cdn.firebase.com/js/simple-login/1.6.4/firebase-simple-login.js"></script>
 
 		<!-- javascript files -->
 		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
@@ -33,7 +34,7 @@
 	  	<!-- <input id="editButton" class="right" type="button" value="edit" onclick="saveFeeds()"> -->
 	  	<input id="saveFeedsButton" class="right small secondary button" type="button" value="save feeds" onclick="saveFeeds()">
 	  	<input id="showOptionsButton" class="right small secondary button" type="button" value="add feed" onclick="showHideOptionsList()">
-	  	
+
 	  	<ul id="optionsList">
 				<li id="hackerNewsOption">hacker news</li>
 				<li id="dribbbleOption">dribbble</li> 
@@ -41,7 +42,7 @@
 				<li id="bbcOption">bbc</li> 
 				<li id="scienceDailyOption">science daily</li> 
 				<li id="redditOption">reddit</li> 
-				<li> <input id="createFeed" class="right small button" type="button" value="create feed" onclick="addFeedToPage()"></li>
+				<li> <input id="createFeed" class="right button" type="button" value="create feed" onclick="addFeedToPage()"></li>
 		</ul> 
 	</nav>	 
 
