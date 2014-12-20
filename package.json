@@ -4,6 +4,7 @@
   "description": "customizable news aggregator",
   "main": "feed.js",
   "scripts": {
+    "start":"node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +25,9 @@
     "consolidate": "^0.10.0",
     "mustache": "^0.8.2",
     "path": "^0.4.9"
+  },
+  "engines": {
+    "node": "0.10.33",
+    "npm": "1.4.28"
   }
 }

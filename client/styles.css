@@ -1,0 +1,162 @@
+html {
+	font-family: 'Montserrat', sans-serif !important;
+
+}
+.logo {
+    background-image: url('./wishFeedlogo.png');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    z-index: 10 !important;
+
+   /* content: "";
+    display: inline-block;
+    height: 40px;
+    margin-right: 10px;
+    position: relative;
+    width: 40px;*/
+
+
+}
+body {
+	width: 100%;
+	height: 100%;
+	float: left;
+	background-color: #EDEDED;
+	color: #EDEDED;
+}
+
+.button.secondary {
+	background-color: white !important;
+	border: 2px solid #333   !important;
+	font-family: 'Montserrat' !important;
+}
+.button.secondary:active {
+	background-color: gray !important;\
+}
+button {
+	font-family: 'Montserrat', sans-serif;
+	background-color: white;
+	padding: 5px;
+}
+#optionsText {
+	color: white;
+}
+#allFeeds {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+#showOptionsButton, #saveFeedsButton{
+	top: 15px;
+	right: 15px;
+	margin-bottom: 15px;
+	position: relative;
+}
+#dribbble a {
+	display: block;
+	height: 200px;
+	color: black;
+	text-decoration: none;
+	z-index:300;
+	margin: 5px 0 5px 0;
+	padding-left: 20px;
+}
+#createFeed {
+	float: right;
+	top: 10px;
+	right: 0;
+	z-index: 99;
+	font-family: 'Montserrat' !important;
+}
+
+
+#optionsList {
+	margin-top: 50px;
+	float: right;
+	text-align: center;
+	position: absolute;
+	list-style-type: none;
+	z-index: 100;
+	right: 20px;
+	background-color: white;
+	font-size: 14px;
+	font-family: 'Montserrat' !important;
+}
+
+
+
+#optionsList .ui-selected { 
+	background: #333; color: white; 
+	border: #333 3px solid;
+}
+
+.feed {
+	border: black 2px solid;
+	height: 250px;
+	width: 250px;
+	position: absolute;
+	white-space: nowrap;
+	overflow-y: scroll;
+	background-color: white;
+	font-size: 13px;
+}
+
+#quora {
+	border: #99C7BA 3px solid;
+}
+
+#quora p {
+	background-color: #99C7BA;
+	color: white;
+}
+#reddit {
+	border: #cfb4d2 3px solid;
+}
+#reddit p {
+	background-color: #cfb4d2;
+	color: white;
+}
+#scienceDaily {
+	border: #2B879E 3px solid;
+}
+#scienceDaily p {
+	background-color: #2B879E;
+	color: white;
+}
+#bbc {
+	border: #64989D 3px solid;
+}
+#bbc p{
+	background-color: #64989D;
+	color: white;
+}
+#dribbble {
+	border: #A5AAD9 3px solid;
+}
+#dribbble p {
+	background-color: #A5AAD9;
+	color: white;
+}
+#hackerNews {
+	border: #A9C1D9 3px solid;
+}
+#hackerNews p {
+	background-color: #A9C1D9;
+	color: white;
+}
+.feed a {
+	display: block;
+	height: 25px;
+	color: black;
+	text-decoration: none;
+	z-index:300;
+	margin: 5px 0 5px 0;
+}
+a {
+	font-family: 'Montserrat', sans-serif;
+}
+
+div a:hover {
+	color: #607890;
+}
