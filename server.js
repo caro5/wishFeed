@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 var path = require('path')
-
+var port = process.env.PORT || 3000;
 var engines = require('consolidate');
 
 app.use(express.static(path.join(__dirname, '/client')));
@@ -14,13 +14,13 @@ app.engine('html', engines.mustache);
 app.set('view engine', 'html');
 
 app.get('/', function (req, res) {
-  res.render('home');
+  res.render('index');
 })
 
-var server = app.listen(3000, function () {
+var server = app.listen(port, function () {
 
   var host = server.address().address
-  var port = server.address().port
+  // port = server.address().port
 
   console.log('Example app listening at http://%s:%s', host, port)
 
